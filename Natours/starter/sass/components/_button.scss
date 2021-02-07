@@ -1,5 +1,6 @@
 .btn {
-  &:link,
+  &,
+  &:link, // Only for <a> element
   :visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -9,6 +10,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    // Changes for <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -20,7 +25,9 @@
     }
   }
 
+  &:focus,
   &:active {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); /*decrese the shadow to makes it smaller and closer to the page, further away rom the user */
   }
